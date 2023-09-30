@@ -10,7 +10,7 @@ enum Auth {
 }
 
 class AuthScreen extends StatefulWidget {
-  static const String routename = '/auth-screen';
+  static const String routeName = '/auth-screen';
 
   const AuthScreen({super.key});
 
@@ -43,6 +43,14 @@ class _AuthScreenState extends State<AuthScreen> {
       email: _emailController.text,
       password: _passwordController.text,
       name: _nameController.text,
+    );
+  }
+
+  void signInUser() {
+    authService.signInUser(
+      context: context,
+      email: _emailController.text,
+      password: _passwordController.text,
     );
   }
 
@@ -160,7 +168,11 @@ class _AuthScreenState extends State<AuthScreen> {
                         const SizedBox(height: 10),
                         CustomButton(
                           text: 'Sign In',
-                          onTap: () {},
+                          onTap: () {
+                            if (_signInFormKey.currentState!.validate()) {
+                              signInUser();
+                            }
+                          },
                         ),
                       ],
                     ),

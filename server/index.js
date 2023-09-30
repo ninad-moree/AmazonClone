@@ -8,8 +8,8 @@ const authRouter = require("./routes/auth");
 // INITIALIZATION (INIT)
 const PORT = 3000;
 const app = express();
-// const DB = "mongodb://localhost:27017/Amazon_Clone";
-const DB = "mongodb+srv://miyamaru:hori18@cluster0.j0aui0b.mongodb.net/?retryWrites=true&w=majority";
+const DB = "mongodb://localhost:27017/Amazon_Clone";
+// const DB = "mongodb+srv://miyamaru:hori18@cluster0.j0aui0b.mongodb.net/?retryWrites=true&w=majority";
 
 // MIDDLEWARE
 app.use(express.json());

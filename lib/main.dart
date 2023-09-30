@@ -1,13 +1,27 @@
 import 'package:amazon/constants/global_variables.dart';
 import 'package:amazon/features/auth/screens/auth_screen.dart';
+import 'package:amazon/providers/user_provider.dart';
 import 'package:amazon/router.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // SharedPreferences prefs = await SharedPreferences.getInstance();
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => UserProvider(),
+        ),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
+  // final SharedPreferences prefs;
   const MyApp({super.key});
 
   @override
