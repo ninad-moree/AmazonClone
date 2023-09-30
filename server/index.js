@@ -8,7 +8,8 @@ const authRouter = require("./routes/auth");
 // INITIALIZATION (INIT)
 const PORT = 3000;
 const app = express();
-const DB = "mongodb://localhost:27017/Amazon_Clone";
+// const DB = "mongodb://localhost:27017/Amazon_Clone";
+const DB = "mongodb+srv://miyamaru:hori18@cluster0.j0aui0b.mongodb.net/?retryWrites=true&w=majority";
 
 // MIDDLEWARE
 app.use(express.json());
@@ -24,18 +25,6 @@ mongoose
     console.log(e);
   });
 
-app.listen(PORT, "0.0.0.0",function () {
+app.listen(PORT, "0.0.0.0", function () {
   console.log(`connected at port ${PORT}`);
 });
-
-//creating an API
-// app.get('/', (req, res)=> {
-//     res.json({ name:  "Ninad More"})
-// })
-// app.get('/hello-world', (req, res)=>{
-//     // res.send('hello world');
-//     res.json({hi: "hello world"});
-// })
-// get,put,delete,update - CRUD Operation
-
-// shift+alt+f
