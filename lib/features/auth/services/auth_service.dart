@@ -1,15 +1,16 @@
 import 'dart:convert';
 
-import 'package:amazon/constants/error_handling.dart';
-import 'package:amazon/constants/global_variables.dart';
-import 'package:amazon/constants/utils.dart';
-import 'package:amazon/features/home/screens/home_screen.dart';
-import 'package:amazon/models/user_model.dart';
-import 'package:amazon/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../../constants/error_handling.dart';
+import '../../../constants/global_variables.dart';
+import '../../../constants/utils.dart';
+import '../../../models/user_model.dart';
+import '../../../providers/user_provider.dart';
+import '../../home/screens/home_screen.dart';
 
 class AuthService {
   void signUpUser({

@@ -1,9 +1,10 @@
-import 'package:amazon/constants/global_variables.dart';
-import 'package:amazon/features/auth/screens/auth_screen.dart';
-import 'package:amazon/providers/user_provider.dart';
-import 'package:amazon/router.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'constants/global_variables.dart';
+import 'features/auth/screens/auth_screen.dart';
+import 'providers/user_provider.dart';
+import 'router.dart';
 
 void main() async {
   // WidgetsFlutterBinding.ensureInitialized();
