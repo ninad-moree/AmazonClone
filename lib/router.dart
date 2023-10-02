@@ -1,4 +1,5 @@
 import 'package:amazon/common/widgets/bottom_navbar.dart';
+import 'package:amazon/features/admin/screens/add_product_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'features/auth/screens/auth_screen.dart';
@@ -17,6 +18,10 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
     case BottomNavBar.routeName:
       return MaterialPageRoute(
         builder: (_) => const BottomNavBar(),
+      );
+    case AddProductScreen.routeName:
+      return MaterialPageRoute(
+        builder: (_) => const AddProductScreen(),
       );
     default:
       return MaterialPageRoute(

@@ -1,5 +1,7 @@
-import 'package:amazon/common/widgets/bottom_navbar.dart';
-import 'package:amazon/features/auth/services/auth_service.dart';
+import 'package:amazon/features/admin/screens/admin_screen.dart';
+
+import 'common/widgets/bottom_navbar.dart';
+import 'features/auth/services/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -56,7 +58,9 @@ class _MyAppState extends State<MyApp> {
       ),
       onGenerateRoute: (settings) => generateRoute(settings),
       home: Provider.of<UserProvider>(context).user.token.isNotEmpty
-          ? const BottomNavBar()
+          ? Provider.of<UserProvider>(context).user.type == 'user'
+              ? const BottomNavBar()
+              : const AdminScreen()
           : const AuthScreen(),
     );
   }
