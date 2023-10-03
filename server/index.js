@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 
 // IMPORTS FROM FILES
 const authRouter = require("./routes/auth");
+const adminRouter = require("./routes/admin");
 
 // INITIALIZATION (INIT)
 const PORT = 3000;
@@ -14,6 +15,7 @@ const DB = "mongodb://localhost:27017/Amazon_Clone";
 // MIDDLEWARE
 app.use(express.json());
 app.use(authRouter);
+app.use(adminRouter);
 
 // CONNECTIONS
 mongoose

@@ -9,7 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../../constants/error_handling.dart';
 import '../../../constants/global_variables.dart';
 import '../../../constants/utils.dart';
-import '../../../models/user_model.dart';
+import '../../../models/user.dart';
 import '../../../providers/user_provider.dart';
 
 class AuthService {
